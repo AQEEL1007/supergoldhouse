@@ -1,0 +1,719 @@
+* {
+    margin: 0;
+    padding: o;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'League Spartan', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: #fefefe;
+    height: 200vh;
+}
+header {
+    width: 100%;
+    height: 80px;
+    background: maroon;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: sticky;
+}
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: gold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.hamburger {
+    display: none;
+}
+.nav-bar ul {
+    display: flex;
+}
+.nav-bar ul li a {
+    display: block;
+    color: goldenrod;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.nav-bar ul li a:hover {
+    color: maroon;
+    background: gold;
+}
+.nav-bar ul li a.active {
+    color: maroon;
+    background: gold;
+}
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: gold;
+        margin: 6px 0;
+    }
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: maroon;
+        transition: 0.8s;
+        overflow: hidden;
+    }
+    .nav-bar.active {
+        height: 450px;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #fefefe;
+}
+h2 {
+    font-size: 46px;
+    color: #fefefe;
+    line-height: 54px;
+}
+h4 {
+    font-size: 20px;
+    color: #fefefe;
+}
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+P {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+.section-p1 {
+    padding: 40px 80px;
+}
+.section-m1 {
+    margin: 40px 0;
+}
+body {
+    width: 100%;
+}
+
+/*home page*/
+#hero {
+    background-image: url("img/wedding-engagement-ring-jewelry-pink-ribbin.jpg");
+    height:89vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 5%;
+    border: 10px solid white;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 1);
+}
+
+@media (max-width:768px) {
+    #hero {
+        background-size: 700PX 600PX;
+        padding: 0 10px;
+        background-image: url("img/OIP.jpg");
+        height: 80vh;
+    }
+    #hero h4 {
+        padding-bottom: 5px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 0.8rem;
+        color: black;
+    }
+    #hero h1 {
+        color: rgb(127, 109, 4);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1rem;
+        line-height: 30px;
+    }
+    #hero h2 {
+        color: rgb(97, 97, 97);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+    #hero p {
+        color: rgb(118, 118, 118);
+        font-size: 0.7rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+   #hero button {
+    background-size: 60% !important;
+    padding: 10px 50px 10px 45px !important;
+   }
+}
+#hero h4 {
+    padding-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+#hero h1 {
+    color: rgb(123, 106, 10);
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 60pxpx;
+}
+#hero h2 {
+    color: rgb(117, 117, 117);
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 40px;
+}
+#hero p {
+    color:rgb(35, 4, 4);
+    font-weight:bolder;
+
+}
+#hero button {
+    background-image: url("img/button1.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center center;
+    padding: 14px 80px 14px 65px;
+    border: none;
+    cursor: pointer;
+    color: #fefefe;
+    font-weight: 700;
+    font-size: 15px;
+
+}
+#hero button:hover {
+    transform: scale(1.1);
+}
+
+/*feature*/
+
+#feautres h2 {
+    text-align: center;
+    color: maroon;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#feautres .services {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#feautres .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.03);
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: 15px 0;
+    
+}
+#feautres .fe-box:hover {
+    transform: scale(1.1);
+    box-shadow: 20px 20px 10px rgba(70, 62, 221, 0.1);
+}
+#feautres .fe-box img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#feautres .fe-box h6 {
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: maroon;
+    background-color: gold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#top1 {
+    text-align: center;
+
+}
+#top1 h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: maroon;
+}
+#top1 p {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+#top1 .top-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+#top1 .top {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid whitesmoke;
+    margin: 15px 0;
+}
+#top1 .top:hover {
+    transform: scale(1.1);
+}
+#top1 .top img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/*catalogue page*/
+
+#Catalogue1 {
+    text-align: center;
+
+}
+#Catalogue1 h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: maroon;
+}
+
+#Catalogue1 .catalogue-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#Catalogue1 .cat {
+    width: 600px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.03);
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: 35px 0;
+    
+}
+#Catalogue1 .cat:hover {
+    box-shadow: 20px 20px 10px rgba(70, 62, 221, 0.1);
+}
+#Catalogue1 .cat img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#Catalogue1 .cat h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 3;
+    border-radius: 4px;
+    color: maroon;
+    background-color: gold;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    cursor: pointer;
+}
+#Catalogue1 .cat h6:hover {
+    transform: scale(1.1);
+    box-shadow: 20px 20px 10px rgba(70, 62, 221, 0.1);
+}
+
+/*banner*/
+
+#banner .banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px 15px 15px ;
+}
+
+#banner .banner-container img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/*detail*/
+
+#detail .showing p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+#detail .horizontal-line {
+    border-top: 1px solid black;
+}
+
+/*design*/
+
+#designs {
+    text-align: center;
+}
+#designs .design-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap:wrap;
+}
+#designs .design {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: 0.2s ease;
+}
+#designs .design:hover {
+    transform: scale(1.05);
+}
+#designs .design img {
+    width: 100%;
+    border-radius: 20px;
+}
+#designs .design .des {
+    padding: 10px 0;
+}
+#designs .design .des h4 {
+    color: maroon;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*today gold rate*/
+
+#gold-rate .shape {
+    width: 10rem;
+    height: auto;
+    background: -webkit-linear-gradient(-32deg,maroon, gold);
+    background: linear-gradient(-32deg, maroon, gold);
+    border-radius: 15px;
+    cursor: auto; /* Not draggable */
+    position: fixed; /* Fixed position */
+    top: 85%; /* Adjust as needed to move it up */
+    right: 10px; /* Adjust as needed to position it on the right side */
+    display: flex;
+    flex-direction: column; /* Stack text elements vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 1px; /* Add padding to space the lines properly */
+}
+
+#gold-rate .shape .text {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    color: rgb(255, 242, 0);
+    text-align: center;
+    margin: 2px;
+}
+
+#gold-rate .shape .text:first-child {
+    font-size: 1em; /* Adjust the font size for the first line (larger text) */
+}
+
+#gold-rate .shape .text:not(:first-child) {
+    font-size: 0.7em; /* Adjust the font size for the other lines (smaller text) */
+}
+
+
+/*about*/
+
+#about {
+    text-align: center;
+}
+
+#about h1 {
+    color: maroon;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    padding-bottom: 25px;
+}
+
+#about h4 {
+    color: maroon;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+#about p {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    padding-bottom: 25px;
+}
+
+#about .gold {
+    color: goldenrod;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+#ab-banner .ab-banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px 15px 15px;
+}
+
+#ab-banner .ab-banner-container img {
+    width: 100%;
+    height: 275px;
+    border-radius: 10px;
+}
+
+/*shop now page*/
+
+#shop-now1 {
+    text-align: center;
+
+}
+#shop-now1 h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: maroon;
+}
+
+#shop-now1 .shop-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#shop-now1 .shop {
+    width: 600px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.03);
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: 35px 0;
+    
+}
+#shop-now1 .shop:hover {
+    box-shadow: 20px 20px 10px rgba(70, 62, 221, 0.1);
+}
+#shop-now1 .shop img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#shop-now1 .shop h6 {
+    display: block;
+    padding: 5px 8px 5px 8px;
+    line-height: 3;
+    border-radius: 4px;
+    color: maroon;
+    background-color: gold;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#shop-now1 .shop h6:hover {
+    transform: scale(1.05);
+    box-shadow: 20px 20px 10px rgba(70, 62, 221, 0.1);
+}
+
+
+/*shop now page images*/
+
+#designs .design {
+    position: relative;
+}
+#designs .design .des .star {
+    text-align: start;
+    padding-top: 7px;
+}
+#designs .design .des .star i {
+    font-size: 12px;
+    color: gold;
+}
+#designs .design .des .price h4 {
+    font-size: 15px;
+    padding-top: 7px;
+    font-weight: 800;
+}
+#designs .design .whats {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    background-color: rgb(0, 255, 64);
+    position: absolute;
+    bottom: 40px;
+    right: 15px;
+    color: rgb(255, 255, 255);
+}
+
+/* FOOTER*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Metal+Mania&family=Poppins:ital,wght@300;400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+/*    background:linear-gradient(to right, #E91E63, #3F51V5); */
+}
+
+.footer{
+  position:relative;
+  max-width: 100vw;
+  background-color: maroon;
+  padding: 30px 0;
+  margin-bottom: 0;
+  padding-bottom:0px;
+}
+.container{
+  max-width: 1170px;
+/*   max-width: 90vw; */
+/*   background-color: red; */
+  margin:auto;
+}
+.row{
+  display:flex;
+  flex-wrap:wrap;
+}
+.footer-col{
+  width:25%;
+  padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 20px;
+  font-weight: 700;
+  color:gold;
+  text-transform: capitalize;
+  margin-bottom: 35px;  
+  position: relative;
+}
+ul{
+  list-style:none;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #e91e63;
+  box-sizing: border-box;
+  height: 2px;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration:none;
+  color: gold;
+  display:block;  
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: white;
+  padding-left: 7px;
+}
+.footer-col .social-links{
+  margin:auto;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height :50px;
+  width : 50px;
+  position:relative;
+  overflow:hidden;
+  margin: 3px; 
+  border-radius:50%;
+  color: gold;
+  text-decoration:none;
+}
+
+
+/* for dice flip icons */
+.social-links a span{
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color: rgba(255,255,255,.2);
+  color: #ffffff;
+  text-align:center;
+  line-height:50px;
+  font-size: 20px;
+  -webkit-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+.social-links a span:last-child{
+  -webkit-transform:translateY(100%);
+  transform:translateY(100%);
+  background-color: rgba(0,0,0,0.2);  
+}
+.social-links a:hover span:first-child{
+  -webkit-transform:translateY(-100%);
+  transform:translateY(-100%);
+}
+.social-links a:hover span:last-child{
+  -webkit-transform:translateY(0%);
+  transform:translateY(0%);
+  color: #242626;
+  background-color: gold;
+}
+/* for dice flip icons */
+
+
+/* responsive */
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
