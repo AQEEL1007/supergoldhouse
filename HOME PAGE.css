@@ -10,155 +10,95 @@ body {
     background: #fefefe;
     height: 200vh;
 }
-/* Styles for the hamburger menu */
-
-.navigation {
-    height: 55px;
-    background: linear-gradient(45deg, #4199fe, #74b4fe);
+header {
+    width: 100%;
+    height: 80px;
+    background: maroon;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: sticky;
 }
-.brand {
-    position: absolute;
-    padding-left: 20px;
-    float: left;
-    line-height: 55px;
-    text-transform: uppercase;
-    font-size: 1.4em;
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: gold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.brand a, .brand a:visited {
-    color: #ffffff;
-    text-decoration: none;
+.hamburger {
+    display: none;
 }
-.nav-container {
-    max-width: 1000px;
-    margin: 0 auto;
+.nav-bar ul {
+    display: flex;
 }
-nav {
-    float: right;
-}
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    float: left;
-    position: relative;
-}
-nav ul li a,nav ul li a:visited {
+.nav-bar ul li a {
     display: block;
-    padding: 0 20px;
-    line-height: 55px;
-    color: #fff;
-    background: #262626 ;
-    text-decoration: none;
+    color: goldenrod;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
 }
-nav ul li a{
-    background: transparent;
-    color: #FFF;
+.nav-bar ul li a:hover {
+    color: maroon;
+    background: gold;
 }
-nav ul li a:hover, nav ul li a:visited:hover {
-    background: #2581DC;
-    color: #ffffff;
+.nav-bar ul li a.active {
+    color: maroon;
+    background: gold;
 }
-.navbar-dropdown li a{
-    background: #2581DC;
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
 }
-nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
-    padding-left: 4px;
-    content: ' \025BE';
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
 }
-nav ul li ul li {
-    min-width: 190px;
-}
-nav ul li ul li a {
-    padding: 15px;
-    line-height: 20px;
-}
-.navbar-dropdown {
-    position: absolute;
-    display: none;
-    z-index: 1;
-    background: #fff;
-    box-shadow: 0 0 35px 0 rgba(0,0,0,0.25);
-}
-/* Mobile navigation */
-.nav-mobile {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: transparent;
-    height: 55px;
-    width: 70px;
-}
-@media only screen and (max-width: 800px) {
-    .nav-mobile {
+@media only screen and (max-width: 900px) {
+    .hamburger {
         display: block;
-   }
-    nav {
-        width: 100%;
-        padding: 55px 0 15px;
-   }
-    nav ul {
-        display: none;
-   }
-    nav ul li {
-        float: none;
-   }
-    nav ul li a {
-        padding: 15px;
-        line-height: 20px;
-        background: #262626;
-   }
-    nav ul li ul li a {
-        padding-left: 30px;
-   }
-    .navbar-dropdown {
-        position: static;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: gold;
+        margin: 6px 0;
+    }
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: maroon;
+        transition: 0.8s;
+        overflow: hidden;
+    }
+    .nav-bar.active {
+        height: 450px;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
 }
-}
-@media screen and (min-width:800px) {
-    .nav-list {
-        display: block !important;
-   }
-}
-#navbar-toggle {
-    position: absolute;
-    left: 18px;
-    top: 15px;
-    cursor: pointer;
-    padding: 10px 35px 16px 0px;
-}
-#navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 3px;
-    width: 30px;
-    background: #ffffff;
-    position: absolute;
-    display: block;
-    content: '';
-    transition: all 300ms ease-in-out;
-}
-#navbar-toggle span:before {
-    top: -10px;
-}
-#navbar-toggle span:after {
-    bottom: -10px;
-}
-#navbar-toggle.active span {
-    background-color: transparent;
-}
-#navbar-toggle.active span:before, #navbar-toggle.active span:after {
-    top: 0;
-}
-#navbar-toggle.active span:before {
-    transform: rotate(45deg);
-}
-#navbar-toggle.active span:after {
-    transform: rotate(-45deg);
-}
-
 
 h1 {
     font-size: 50px;
@@ -214,8 +154,8 @@ body {
     #hero {
         background-size: 700PX 600PX;
         padding: 0 10px;
-        background-image: url("img/wedding-engagement-ring-jewelry-pink-ribbin.jpg");
-        height: 80vh;
+        background-image: url("img/OIP.jpg");
+        height: 100vh;
     }
     #hero h4 {
         padding-bottom: 5px;
