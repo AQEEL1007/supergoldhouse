@@ -10,6 +10,37 @@ body {
     background: #fefefe;
     height: 200vh;
 }
+/* Styles for the hamburger menu */
+#menu-toggle {
+    display: none;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+}
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: gold;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+/* Rotate lines for the X icon when menu is open */
+#menu-toggle:checked + .hamburger .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+#menu-toggle:checked + .hamburger .line:nth-child(2) {
+    opacity: 0;
+}
+#menu-toggle:checked + .hamburger .line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+/* Styles for the navigation bar */
 header {
     width: 100%;
     height: 80px;
@@ -17,20 +48,28 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 100px;
     position: sticky;
+    top: 0;
+    z-index: 100;
 }
 .logo {
     font-size: 28px;
     font-weight: bold;
     color: gold;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20px;
 }
-.hamburger {
-    display: none;
+.nav-bar {
+    display: flex;
 }
 .nav-bar ul {
     display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar ul li {
+    margin-right: 15px;
 }
 .nav-bar ul li a {
     display: block;
@@ -39,66 +78,37 @@ header {
     padding: 10px 20px;
     border-radius: 50px;
     transition: 0.2s;
-    margin: 0 5px;
+    text-decoration: none;
 }
 .nav-bar ul li a:hover {
     color: maroon;
     background: gold;
 }
-.nav-bar ul li a.active {
-    color: maroon;
-    background: gold;
-}
-@media only screen and (max-width: 1320px) {
-    header {
-        padding: 0 50px;
-    }
-}
-@media only screen and (max-width: 1100px) {
-    header {
-        padding: 0 30px;
-    }
-}
-@media only screen and (max-width: 600px) {
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-    .hamburger .line {
-        width: 30px;
-        height: 3px;
-        background: gold;
-        margin: 6px 0;
-    }
+/* Responsive styles */
+@media only screen and (max-width: 900px) {
     .nav-bar {
-        height: 0;
+        display: none;
+        flex-direction: column;
         position: absolute;
         top: 80px;
         left: 0;
-        right: 0;
-        width: 100vw;
+        width: 100%;
         background: maroon;
-        transition: 0.8s;
-        overflow: hidden;
+        transition: 0.5s;
     }
-    .nav-bar.active {
-        height: 450px;
+    #menu-toggle:checked + .hamburger + .nav-bar {
+        display: flex;
     }
     .nav-bar ul {
-        display: block;
-        width: fit-content;
-        margin: 80px auto 0 auto;
-        text-align: center;
-        transition: 0.5s;
-        opacity: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
     }
-    .nav-bar.active ul {
-        opacity: 1;
-    }
-    .nav-bar ul li a {
-        margin-bottom: 12px;
+    .nav-bar ul li {
+        margin: 10px 0;
     }
 }
+
 
 h1 {
     font-size: 50px;
