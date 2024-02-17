@@ -8,7 +8,7 @@ if (hamburger) {
             navBar.classList.toggle("active");
             // Increase the z-index of the map container when the hamburger menu is active
             if (mapContainer) {
-                mapContainer.style.zIndex = navBar.classList.contains("active") ? "-1" : "1";
+                mapContainer.style.zIndex = "-1"; // Set the z-index of the map container to be behind the hamburger menu
             }
         }
     };
