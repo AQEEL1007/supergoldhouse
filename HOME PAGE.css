@@ -851,6 +851,9 @@ ul{
     background: linear-gradient(270deg,maroon,gold);
     cursor: pointer;
 }
+.contact-left button:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
 @media(max-width: 767px){
     .contactform-container{
         margin-top: -150px;
